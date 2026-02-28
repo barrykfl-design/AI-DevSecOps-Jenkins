@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI DevSecOps Report 2026-02-28 20:11:19</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;700;800&family=Inter:wght@400;500;600&display=swap');
+:root{--bg:#050b14;--s1:#0d1626;--s2:#111f35;--s3:#162540;--b:#1e3a5f;--b2:#243b60;
+  --ac:#00d4ff;--ac2:#7c3aed;--ac3:#f59e0b;--tx:#dde6f0;--mu:#4d6480;--mn:#64b5f6;
+  --ok:#10b981;--wn:#f59e0b;--dn:#ef4444}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:'Inter',sans-serif;font-size:14px;line-height:1.6}
+body::before{content:'';position:fixed;inset:0;z-index:0;
+  background-image:linear-gradient(rgba(0,212,255,.02) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(0,212,255,.02) 1px,transparent 1px);
+  background-size:48px 48px;pointer-events:none}
+.w{position:relative;z-index:1;max-width:1440px;margin:0 auto;padding:0 28px 80px}
+header{padding:48px 0 32px;border-bottom:1px solid var(--b);margin-bottom:36px;display:flex;align-items:flex-start;gap:20px}
+.logo{width:60px;height:60px;flex-shrink:0;border-radius:14px;background:linear-gradient(135deg,var(--ac),var(--ac2));
+  display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;
+  font-size:18px;font-weight:700;color:#fff;box-shadow:0 0 30px rgba(0,212,255,.35)}
+.ht h1{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;letter-spacing:2px;text-transform:uppercase;
+  background:linear-gradient(120deg,var(--ac),var(--ac2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.ht .sub{color:var(--mu);font-size:12px;margin-top:5px;font-family:'JetBrains Mono',monospace}
+.ts{margin-left:auto;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mu);line-height:2}
+.bn{background:var(--s1);border:1px solid var(--b);border-radius:18px;padding:36px;margin-bottom:28px;
+  display:grid;grid-template-columns:repeat(5,1fr) 180px;gap:16px;align-items:center}
+.sb2{text-align:center}
+.sb2 .n{font-family:'Syne',sans-serif;font-size:44px;font-weight:800;line-height:1}
+.sb2 .l{font-size:10px;text-transform:uppercase;letter-spacing:2px;color:var(--mu);margin-top:6px}
+.gau{text-align:center;border-left:1px solid var(--b);padding-left:20px}
+.gc{width:100px;height:100px;margin:0 auto 8px;border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-family:'Syne',sans-serif;font-size:26px;font-weight:800}
+.gl{font-size:10px;text-transform:uppercase;letter-spacing:2px;color:var(--mu)}
+.sec{background:var(--s1);border:1px solid var(--b);border-radius:16px;margin-bottom:24px;overflow:hidden}
+.sh{padding:18px 28px;border-bottom:1px solid var(--b);background:var(--s2);display:flex;align-items:center;gap:12px}
+.sh h2{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.si{width:34px;height:34px;border-radius:8px;
+  background:linear-gradient(135deg,rgba(0,212,255,.1),rgba(124,58,237,.1));
+  border:1px solid rgba(0,212,255,.2);display:flex;align-items:center;justify-content:center;font-size:16px}
+.sp{padding:28px}
+.ai-b{background:var(--s2);border:1px solid var(--b2);border-radius:12px;padding:28px;line-height:1.85}
+.ai-b h3{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--ac);margin:24px 0 10px;
+  text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid var(--b);padding-bottom:6px}
+.ai-b h3:first-child{margin-top:0}
+.ai-b h4{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--ac3);margin:16px 0 8px}
+.ai-b p{margin-bottom:12px;color:#c8d8e8}
+.ai-b strong{color:#f1f5f9}
+.ai-b code{font-family:'JetBrains Mono',monospace;background:#0a1628;border:1px solid rgba(0,212,255,.15);padding:2px 8px;border-radius:4px;font-size:12px;letter-spacing:-0.1px;color:#7dd3fc}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead tr{background:var(--s2)}
+th{padding:12px 16px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--mu);font-weight:600;white-space:nowrap}
+td{padding:11px 16px;border-top:1px solid rgba(30,58,95,.4);vertical-align:top}
+.fr{cursor:pointer;transition:background .15s}
+.fr:hover td{background:rgba(0,212,255,.04)}
+.xi{color:var(--ac);font-size:16px;width:30px;text-align:center;font-weight:700}
+.dr td{padding:0;background:var(--s3)!important;border:none}
+.di{padding:24px 28px}
+.mono{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:-0.2px;color:var(--mn)}
+.badge{display:inline-block;padding:2px 10px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff}
+.snip{background:#060d16;border:1px solid var(--b);border-radius:8px;padding:14px 16px;
+  margin-bottom:16px;overflow-x:auto;max-width:100%}
+.snip code{color:#7dd3fc;white-space:pre;word-break:normal;overflow-wrap:normal}
+.rem-box{background:var(--s2);border:1px solid rgba(0,212,255,.15);border-left:3px solid var(--ac);border-radius:8px;padding:20px}
+.rem-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--ac);margin-bottom:14px;letter-spacing:.5px}
+.rem-steps{margin-bottom:16px}
+.rem-steps ol{padding-left:20px;color:#c8d8e8;line-height:2.1}
+.rem-code{margin-bottom:12px}
+.rem-code pre code{color:#81c784}
+.rem-ref{font-size:11px;color:var(--mu)}
+.rem-ref a{color:var(--ac);text-decoration:none}
+.je{background:rgba(220,38,38,.06);border:1px solid rgba(220,38,38,.2);border-radius:8px;padding:16px;margin-bottom:16px}
+.jet{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:#fca5a5;margin-bottom:10px}
+.el{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:-0.2px;color:#fca5a5;padding:3px 0;
+  border-bottom:1px solid rgba(220,38,38,.1);word-break:break-all;line-height:1.8}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+.ac{background:var(--s2);border:1px solid var(--b);border-radius:10px;padding:20px}
+.ac.can{border-color:rgba(16,185,129,.3)}
+.ac.cannot{border-color:rgba(245,158,11,.3)}
+.al{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;margin-bottom:12px;letter-spacing:.3px}
+.ac.can .al{color:var(--ok)}
+.ac.cannot .al{color:var(--wn)}
+.ac ul{padding-left:18px;color:#adc4d8;line-height:2.1;font-size:13px}
+pre,code{font-family:'JetBrains Mono','Fira Code','Cascadia Code',monospace;font-size:12.5px;line-height:1.8;letter-spacing:-0.2px;font-variant-ligatures:none}
+pre{position:relative;background:linear-gradient(180deg,#060e1a 0%,#040a11 100%);border:1px solid rgba(0,212,255,.15);border-left:3px solid rgba(0,212,255,.4);border-radius:0 8px 8px 0;padding:18px 22px;overflow-x:auto;white-space:pre;word-wrap:normal;max-width:100%;tab-size:2;-moz-tab-size:2;box-shadow:inset 0 1px 0 rgba(255,255,255,.03)}
+pre code{background:none;padding:0;border-radius:0;font-size:12.5px;color:#a8d8a0;white-space:pre;word-break:normal;overflow-wrap:normal;letter-spacing:-0.2px}
+:not(pre)>code{font-size:12px;letter-spacing:-0.1px;padding:2px 7px;border-radius:4px;background:#0a1628;border:1px solid rgba(0,212,255,.15);color:#7dd3fc}
+.rem-code pre{margin-top:10px}
+.jfe{margin-top:20px;max-width:100%;overflow:hidden;position:relative}
+.jft{font-family:'Syne',sans-serif;font-size:11px;color:var(--ac);display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;letter-spacing:1px;text-transform:uppercase;font-weight:700}
+.copy-btn{font-family:'Inter',sans-serif;font-size:11px;font-weight:600;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.3);color:var(--ac);padding:4px 12px;border-radius:6px;cursor:pointer;letter-spacing:.5px;text-transform:uppercase;transition:all .15s;flex-shrink:0}
+.copy-btn:hover{background:rgba(0,212,255,.2);border-color:var(--ac)}
+.copy-btn.copied{background:rgba(16,185,129,.15);border-color:#10b981;color:#10b981}
+.jfe pre{border-left:3px solid rgba(0,212,255,.5)}
+.jfe pre code{color:#c5e8b0;font-size:12.5px}
+
+footer{text-align:center;padding:32px 0;color:var(--mu);font-size:11px;
+  font-family:'JetBrains Mono',monospace;border-top:1px solid var(--b);margin-top:40px}
+/* ── Jenkinsfile Guide ─────────────────────────────────── */
+.faq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
+.faq-card{border-radius:12px;padding:20px;border:1px solid var(--b)}
+.faq-blue{background:rgba(0,212,255,.05);border-color:rgba(0,212,255,.25)}
+.faq-yellow{background:rgba(245,158,11,.05);border-color:rgba(245,158,11,.25)}
+.faq-red{background:rgba(220,38,38,.05);border-color:rgba(220,38,38,.25)}
+.faq-icon{font-size:22px;margin-bottom:10px}
+.faq-q{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;margin-bottom:10px;color:#f1f5f9}
+.faq-a{font-size:13px;color:#adc4d8;line-height:1.8}
+.faq-a code{font-family:'JetBrains Mono',monospace;background:#0a1628;border:1px solid rgba(0,212,255,.12);padding:1px 7px;border-radius:4px;font-size:12px;letter-spacing:-0.1px;color:#7dd3fc}
+.faq-a ul{padding-left:16px}
+.opt-badge{display:inline-block;padding:1px 8px;border-radius:4px;font-size:11px;font-weight:700;margin-right:4px}
+.opt-a{background:rgba(16,185,129,.2);color:#34d399}
+.opt-b{background:rgba(245,158,11,.2);color:#fbbf24}
+.guide-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--ac);
+  letter-spacing:.5px;border-bottom:1px solid var(--b);padding-bottom:10px;margin-bottom:20px;text-transform:uppercase}
+.steps-wrap{display:flex;flex-direction:column;gap:0}
+.step-row{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid rgba(30,58,95,.5)}
+.step-row:last-child{border-bottom:none}
+.step-num{width:36px;height:36px;flex-shrink:0;border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--ac2));
+  display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;
+  font-weight:800;font-size:15px;color:#fff;box-shadow:0 0 16px rgba(0,212,255,.3)}
+.step-body{flex:1}
+.step-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:#f1f5f9;margin-bottom:8px}
+.step-desc{font-size:13px;color:#adc4d8;line-height:1.85}
+.step-desc code{font-family:'JetBrains Mono',monospace;background:#0a1628;border:1px solid rgba(0,212,255,.12);padding:1px 7px;border-radius:4px;font-size:12px;letter-spacing:-0.1px;color:#7dd3fc}
+.step-cmd{font-family:'JetBrains Mono',monospace;background:#040a11;border:1px solid rgba(0,212,255,.2);
+  border-left:3px solid rgba(0,212,255,.4);border-radius:0 6px 6px 0;
+  padding:10px 14px;margin-top:10px;font-size:12.5px;letter-spacing:-0.2px;color:#a8d8a0;line-height:1.7}
+.merge-box{background:var(--s2);border:1px solid var(--b);border-radius:8px;padding:14px;font-size:12px;color:#adc4d8;line-height:1.7}
+.merge-title{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;margin-bottom:8px}
+.ph-table{width:100%;border-collapse:collapse;margin-top:12px;font-size:12px}
+.ph-table th{background:var(--s3);padding:8px 12px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--mu)}
+.ph-table td{padding:8px 12px;border-top:1px solid rgba(30,58,95,.4);color:#adc4d8}
+.ph-table td code{font-family:'JetBrains Mono',monospace;background:#0a1628;border:1px solid rgba(245,158,11,.2);padding:1px 7px;border-radius:4px;font-size:12px;letter-spacing:-0.1px;color:#fbbf24}
+.cred-box{background:var(--s2);border:1px solid var(--b);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:12px}
+.cred-step{display:flex;align-items:flex-start;gap:14px;font-size:13px;color:#adc4d8;line-height:1.7}
+.cred-num{width:26px;height:26px;flex-shrink:0;border-radius:50%;background:var(--b2);
+  border:1px solid var(--ac);display:flex;align-items:center;justify-content:center;
+  font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:-0.1px;font-weight:700;color:var(--ac)}
+.cred-step code{font-family:'JetBrains Mono',monospace;background:#0a1628;border:1px solid rgba(0,212,255,.12);padding:1px 7px;border-radius:4px;font-size:12px;letter-spacing:-0.1px;color:#7dd3fc}
+@media(max-width:900px){.bn{grid-template-columns:repeat(3,1fr)}.ag{grid-template-columns:1fr}.faq-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="w">
+
+<header>
+  <div class="logo">SEC</div>
+  <div class="ht">
+    <h1>AI DevSecOps Security Report</h1>
+    <div class="sub">Jenkins &middot; GitHub &middot; Snyk &middot; OWASP ZAP &middot; Deploy &middot; WordPress &nbsp;|&nbsp; AI DevSecOps v2.1</div>
+  </div>
+  <div class="ts">Generated: 2026-02-28 20:11:19<br>Scanner: AI DevSecOps v2.1<br>Path: C:\ProgramData\Jenkins\.jenkins\jobs</div>
+</header>
+
+<div class="bn">
+  <div class="sb2"><div class="n" style="color:var(--ac)">6</div><div class="l">Jobs Scanned</div></div>
+  <div class="sb2"><div class="n" style="color:#dc2626">17</div><div class="l">Critical</div></div>
+  <div class="sb2"><div class="n" style="color:#ea580c">7</div><div class="l">High</div></div>
+  <div class="sb2"><div class="n" style="color:#d97706">1</div><div class="l">Medium / Low</div></div>
+  <div class="sb2"><div class="n" style="color:var(--dn)">4<span style="font-size:24px;color:var(--mu)">/</span>2</div><div class="l">Failed / Passed</div></div>
+  <div class="gau">
+    <div class="gc" style="background:conic-gradient(#dc2626 0% 100%,#162540 100% 100%);box-shadow:0 0 28px #dc262644">
+      <span style="background:var(--s1);width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center">100</span>
+    </div>
+    <div class="gl">Risk Score / 100</div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sh"><div class="si">&#129302;</div><h2>AI Security Analysis &amp; Executive Summary</h2></div>
+  <div class="sp"><div class="ai-b"><p><h3>Executive Summary</h3></p><p>Automated scan completed across <strong>6 Jenkins pipeline jobs</strong><br>(including Snyk, Deploy, and OWASP ZAP sub-folders).<br><strong>4 builds are currently FAILING</strong><br>(WP-DevSecOps-Security-Scan, WP-DevSecOps-Security-Scan, WP-DevSecOps-Security-Scan, WP-DevSecOps-Security-Scan).<br>2 build(s) passing. Total findings: <strong>25</strong> — categories: RCE Risk (17), Fatal Error (4), Snyk High Vulnerability (2), OWASP ZAP (1), Deprecated Usage (1).</p><p><div style="background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.35);border-radius:10px;padding:18px;margin:14px 0;font-size:13px;line-height:2"><br><strong style="font-size:14px">&#9888; LM Studio AI was not used — showing built-in regex analysis</strong><br><br><strong style="color:#fbbf24">Most likely cause: LM Studio has no model loaded.</strong><br><br><br><strong>How to fix in 3 steps:</strong><br><br>&nbsp;&nbsp;<span style="color:#34d399;font-weight:700">Step 1</span> &mdash; Open <strong>LM Studio</strong> on your computer<br><br>&nbsp;&nbsp;<span style="color:#34d399;font-weight:700">Step 2</span> &mdash; Click the <strong>Developer</strong> tab (left sidebar, looks like <code>&lt;/&gt;</code>)<br><br>&nbsp;&nbsp;<span style="color:#34d399;font-weight:700">Step 3</span> &mdash; Click a model in the list &rarr; press <strong>Load Model</strong> &rarr; wait for the green <strong>"Running"</strong> status &rarr; re-run the scanner<br><br><br><strong>Alternative — use a cloud AI instead (no LM Studio needed):</strong><br><br>&nbsp;&nbsp;OpenAI: <code>python ai_devsecops_scanner.py --api-type openai --api-key sk-YOUR-KEY</code><br><br>&nbsp;&nbsp;Anthropic: <code>python ai_devsecops_scanner.py --api-type anthropic --api-key sk-ant-YOUR-KEY</code><br><br>&nbsp;&nbsp;Skip AI entirely: <code>python ai_devsecops_scanner.py --no-llm</code><br></div></p><p><h3>Root Cause — First Error Lines from Failed Builds</h3></p><p><b>WP-DevSecOps-Security-Scan:</b> L3: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:<br><b>WP-DevSecOps-Security-Scan:</b> L3: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:<br><b>WP-DevSecOps-Security-Scan:</b> L3: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:<br><b>WP-DevSecOps-Security-Scan:</b> L3: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:</p><p><h3>Top 5 Immediate Actions</h3></p><p>1. <strong>Fix failing builds first</strong> — open each failed job log and look for the line just ABOVE "BUILD FAILURE". That line contains the root cause. Scroll the "Failed Build Errors" section below.<br>2. <strong>Check Jenkins credentials</strong> — Go to Manage Jenkins &rarr; Credentials. Verify GitHub token, Snyk token, and any deployment keys are still valid.<br>3. <strong>Verify webhook</strong> — In GitHub: Settings &rarr; Webhooks &rarr; Recent Deliveries. Look for non-200 response codes. If Jenkins is behind NAT/firewall, use ngrok.<br>4. <strong>Run npm audit fix</strong> — For any Node.js/WP theme jobs, this auto-patches known CVEs in one command.<br>5. <strong>Review OWASP ZAP alerts</strong> — Open the ZAP HTML report and address all HIGH risk items before next release.</p><p><h3>Remediation Roadmap</h3></p><p><strong>Immediate (today):</strong> Fix the 4 failing build(s) using the error details below.<br><br><strong>Short-term (this week):</strong> Add catchError blocks to Jenkinsfiles. Verify all credentials are fresh. Fix HIGH ZAP alerts.<br><br><strong>Long-term (this month):</strong> Implement the Auto-Remediation Jenkinsfile template in the guide section below.</p><p><h3>Jenkins Auto-Remediation</h3></p><p>Jenkins CAN automatically fix: npm CVEs, WP plugin updates, retrying failed stages, notifications, archiving ZAP/Snyk reports.<br><br>Jenkins CANNOT auto-fix: rotated secrets, custom code bugs, dependency conflicts, DB issues, firewall/NAT settings, ZAP HIGH findings.</p><p><em>Click any finding row below for step-by-step fix instructions + copy-paste Jenkinsfile code.</em></p></div></div>
+</div>
+
+<div class="sec"><div class="sh"><div class="si">&#128165;</div><h2>Failed Build — Raw Error Details</h2></div><div class="sp"><div class="je"><div class="jet">Job: WP-DevSecOps-Security-Scan — Build #85</div><div class='el'>L3: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:</div><div class='el'>L10: at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)</div><div class='el'>L11: at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)</div><div class='el'>L12: at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)</div><div class='el'>L13: at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)</div><div class='el'>L14: at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:349)</div></div><div class="je"><div class="jet">Job: WP-DevSecOps-Security-Scan — Build #84</div><div class='el'>L3: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:</div><div class='el'>L10: at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)</div><div class='el'>L11: at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)</div><div class='el'>L12: at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)</div><div class='el'>L13: at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)</div><div class='el'>L14: at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:349)</div></div><div class="je"><div class="jet">Job: WP-DevSecOps-Security-Scan — Build #83</div><div class='el'>L3: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:</div><div class='el'>L10: at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)</div><div class='el'>L11: at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)</div><div class='el'>L12: at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)</div><div class='el'>L13: at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)</div><div class='el'>L14: at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:349)</div></div><div class="je"><div class="jet">Job: WP-DevSecOps-Security-Scan — Build #82</div><div class='el'>L3: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:</div><div class='el'>L10: at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)</div><div class='el'>L11: at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)</div><div class='el'>L12: at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)</div><div class='el'>L13: at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)</div><div class='el'>L14: at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:349)</div></div></div></div>
+
+<div class="sec">
+  <div class="sh"><div class="si">&#128269;</div><h2>Security Findings (25) — Click Any Row for Step-by-Step Fix</h2></div>
+  <div style="padding:0">
+    <table>
+      <thead><tr><th>Severity</th><th>Category</th><th>Job</th><th>Build</th><th>Detail / Snippet</th><th></th></tr></thead>
+      <tbody><tr class="fr" onclick="tog('f0')"><td><span class="badge" style="background:#dc2626">CRITICAL</span></td><td><strong>RCE Risk</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#86</td><td class="mono">> git.exe fetch --tags --force --progress -- https://github.com/barrykfl-design/my-wp-devsecops.git +refs/heads/*:refs/remotes/origin/* # timeout=10</td><td class="xi">+</td></tr><tr id="f0" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~20):</strong><br><code>&gt; git.exe fetch --tags --force --progress -- https://github.com/barrykfl-design/my-wp-devsecops.git +refs/heads/*:refs/remotes/origin/* # timeout=10</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: RCE Risk</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f1')"><td><span class="badge" style="background:#dc2626">CRITICAL</span></td><td><strong>RCE Risk</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#85</td><td class="mono">at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:349)</td><td class="xi">+</td></tr><tr id="f1" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~14):</strong><br><code>at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:349)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: RCE Risk</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f2')"><td><span class="badge" style="background:#dc2626">CRITICAL</span></td><td><strong>RCE Risk</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#85</td><td class="mono">at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:233)</td><td class="xi">+</td></tr><tr id="f2" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~17):</strong><br><code>at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:233)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: RCE Risk</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f3')"><td><span class="badge" style="background:#dc2626">CRITICAL</span></td><td><strong>RCE Risk</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#85</td><td class="mono">at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:966)</td><td class="xi">+</td></tr><tr id="f3" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~19):</strong><br><code>at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:966)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: RCE Risk</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f4')"><td><span class="badge" style="background:#dc2626">CRITICAL</span></td><td><strong>RCE Risk</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#85</td><td class="mono">at hudson.model.ResourceController.execute(ResourceController.java:97)</td><td class="xi">+</td></tr><tr id="f4" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~31):</strong><br><code>at hudson.model.ResourceController.execute(ResourceController.java:97)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: RCE Risk</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f5')"><td><span class="badge" style="background:#dc2626">CRITICAL</span></td><td><strong>RCE Risk</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#84</td><td class="mono">at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:349)</td><td class="xi">+</td></tr><tr id="f5" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~14):</strong><br><code>at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:349)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: RCE Risk</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f6')"><td><span class="badge" style="background:#dc2626">CRITICAL</span></td><td><strong>RCE Risk</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#84</td><td class="mono">at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:233)</td><td class="xi">+</td></tr><tr id="f6" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~17):</strong><br><code>at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:233)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: RCE Risk</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f7')"><td><span class="badge" style="background:#dc2626">CRITICAL</span></td><td><strong>RCE Risk</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#84</td><td class="mono">at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:966)</td><td class="xi">+</td></tr><tr id="f7" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~19):</strong><br><code>at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:966)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: RCE Risk</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f8')"><td><span class="badge" style="background:#dc2626">CRITICAL</span></td><td><strong>RCE Risk</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#84</td><td class="mono">at hudson.model.ResourceController.execute(ResourceController.java:97)</td><td class="xi">+</td></tr><tr id="f8" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~31):</strong><br><code>at hudson.model.ResourceController.execute(ResourceController.java:97)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: RCE Risk</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f9')"><td><span class="badge" style="background:#dc2626">CRITICAL</span></td><td><strong>RCE Risk</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#83</td><td class="mono">at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:349)</td><td class="xi">+</td></tr><tr id="f9" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~14):</strong><br><code>at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:349)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: RCE Risk</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f10')"><td><span class="badge" style="background:#dc2626">CRITICAL</span></td><td><strong>RCE Risk</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#83</td><td class="mono">at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:233)</td><td class="xi">+</td></tr><tr id="f10" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~17):</strong><br><code>at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:233)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: RCE Risk</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f11')"><td><span class="badge" style="background:#dc2626">CRITICAL</span></td><td><strong>RCE Risk</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#83</td><td class="mono">at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:966)</td><td class="xi">+</td></tr><tr id="f11" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~19):</strong><br><code>at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:966)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: RCE Risk</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f12')"><td><span class="badge" style="background:#dc2626">CRITICAL</span></td><td><strong>RCE Risk</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#83</td><td class="mono">at hudson.model.ResourceController.execute(ResourceController.java:97)</td><td class="xi">+</td></tr><tr id="f12" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~31):</strong><br><code>at hudson.model.ResourceController.execute(ResourceController.java:97)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: RCE Risk</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f13')"><td><span class="badge" style="background:#dc2626">CRITICAL</span></td><td><strong>RCE Risk</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#82</td><td class="mono">at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:349)</td><td class="xi">+</td></tr><tr id="f13" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~14):</strong><br><code>at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:349)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: RCE Risk</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f14')"><td><span class="badge" style="background:#dc2626">CRITICAL</span></td><td><strong>RCE Risk</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#82</td><td class="mono">at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:233)</td><td class="xi">+</td></tr><tr id="f14" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~17):</strong><br><code>at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:233)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: RCE Risk</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f15')"><td><span class="badge" style="background:#dc2626">CRITICAL</span></td><td><strong>RCE Risk</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#82</td><td class="mono">at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:966)</td><td class="xi">+</td></tr><tr id="f15" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~19):</strong><br><code>at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:966)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: RCE Risk</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f16')"><td><span class="badge" style="background:#dc2626">CRITICAL</span></td><td><strong>RCE Risk</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#82</td><td class="mono">at hudson.model.ResourceController.execute(ResourceController.java:97)</td><td class="xi">+</td></tr><tr id="f16" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~31):</strong><br><code>at hudson.model.ResourceController.execute(ResourceController.java:97)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: RCE Risk</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f17')"><td><span class="badge" style="background:#ea580c">HIGH</span></td><td><strong>OWASP ZAP</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#86</td><td class="mono">[8mha:////4C5XH8URi6jqL8l4fXIxYK8kcKoNDTEeBtcDspYL+C92AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0QIIBMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3</td><td class="xi">+</td></tr><tr id="f17" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~76):</strong><br><code>[8mha:////4C5XH8URi6jqL8l4fXIxYK8kcKoNDTEeBtcDspYL+C92AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0QIIBMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfADpB/iZwgAAAA==[0m[Pipeline] { (4 - DAST Scan (OWASP ZAP))</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: OWASP ZAP</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the ZAP HTML/XML report for the list of alerts and their risk levels.</li><li>Start with CRITICAL/HIGH alerts: fix injection flaws, broken auth, sensitive data exposure.</li><li>For WordPress: apply security headers via Nginx/Apache config or WP security plugins.</li><li>Re-run ZAP scan after fixes to verify the alert count drops.</li><li>Add ZAP as a gated stage — fail the build if HIGH alerts exceed threshold.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('OWASP ZAP Scan') {
+    steps {
+        script {
+            // Run ZAP baseline scan (passive only, safe for CI)
+            sh '''
+                docker run --rm -v $(pwd):/zap/wrk/:rw \
+                    -t ghcr.io/zaproxy/zaproxy:stable zap-baseline.py \
+                    -t http://your-app-url \
+                    -r zap_report.html -x zap_report.xml \
+                    --auto || true
+            '''
+        }
+    }
+    post {
+        always {
+            publishHTML([allowMissing: true, alwaysLinkToLastBuild: true,
+                         keepAll: true, reportDir: '.', reportFiles: 'zap_report.html',
+                         reportName: 'OWASP ZAP Report'])
+        }
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://www.zaproxy.org/docs/docker/baseline-scan/" target="_blank">https://www.zaproxy.org/docs/docker/baseline-scan/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f18')"><td><span class="badge" style="background:#ea580c">HIGH</span></td><td><strong>Snyk High Vulnerability</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#86</td><td class="mono">[2026-02-28T11:43:46.709Z] > C:\ProgramData\Jenkins\.jenkins\tools\io.snyk.jenkins.tools.SnykInstallation\Snyk-Scanner\snyk-win.exe test --json --severity-thres</td><td class="xi">+</td></tr><tr id="f18" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~44):</strong><br><code>[2026-02-28T11:43:46.709Z] &gt; C:\ProgramData\Jenkins\.jenkins\tools\io.snyk.jenkins.tools.SnykInstallation\Snyk-Scanner\snyk-win.exe test --json --severity-threshold=high --all-projects</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: Snyk High Vulnerability</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f19')"><td><span class="badge" style="background:#ea580c">HIGH</span></td><td><strong>Snyk High Vulnerability</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#86</td><td class="mono">[2026-02-28T11:43:55.607Z] > C:\ProgramData\Jenkins\.jenkins\tools\io.snyk.jenkins.tools.SnykInstallation\Snyk-Scanner\snyk-win.exe monitor --severity-threshold</td><td class="xi">+</td></tr><tr id="f19" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~49):</strong><br><code>[2026-02-28T11:43:55.607Z] &gt; C:\ProgramData\Jenkins\.jenkins\tools\io.snyk.jenkins.tools.SnykInstallation\Snyk-Scanner\snyk-win.exe monitor --severity-threshold=high --all-projects</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: Snyk High Vulnerability</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f20')"><td><span class="badge" style="background:#ea580c">HIGH</span></td><td><strong>Fatal Error</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#85</td><td class="mono">at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)</td><td class="xi">+</td></tr><tr id="f20" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~11):</strong><br><code>at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: Fatal Error</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f21')"><td><span class="badge" style="background:#ea580c">HIGH</span></td><td><strong>Fatal Error</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#84</td><td class="mono">at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)</td><td class="xi">+</td></tr><tr id="f21" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~11):</strong><br><code>at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: Fatal Error</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f22')"><td><span class="badge" style="background:#ea580c">HIGH</span></td><td><strong>Fatal Error</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#83</td><td class="mono">at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)</td><td class="xi">+</td></tr><tr id="f22" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~11):</strong><br><code>at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: Fatal Error</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f23')"><td><span class="badge" style="background:#ea580c">HIGH</span></td><td><strong>Fatal Error</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#82</td><td class="mono">at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)</td><td class="xi">+</td></tr><tr id="f23" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~11):</strong><br><code>at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: Fatal Error</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr><tr class="fr" onclick="tog('f24')"><td><span class="badge" style="background:#d97706">MEDIUM</span></td><td><strong>Deprecated Usage</strong></td><td>WP-DevSecOps-Security-Scan</td><td>#86</td><td class="mono">[2026-02-28T11:44:25.151Z] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called</td><td class="xi">+</td></tr><tr id="f24" class="dr" style="display:none"><td colspan="6"><div class="di"><div class="snip"><strong>Log Snippet (line ~80):</strong><br><code>[2026-02-28T11:44:25.151Z] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called</code></div><div class="rem-box"><div class="rem-title">&#128295; Fix: Deprecated Usage</div><div class="rem-steps"><strong>Step-by-step:</strong><ol><li>Review the full log entry to understand the context.</li><li>Search the Jenkins build console output for surrounding lines.</li><li>Check Snyk / OWASP documentation for the specific finding type.</li><li>Assign to the responsible developer for investigation.</li><li>Document the finding and track remediation in your issue tracker.</li></ol></div><div class="rem-code"><strong>Jenkinsfile snippet (copy-paste ready):</strong><pre><code>stage('Security Gate') {
+    steps {
+        echo 'Review security findings in SecurityReports folder'
+    }
+}</code></pre></div><div class="rem-ref">Reference: <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></div></div></div></td></tr></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sh"><div class="si">&#128295;</div><h2>Pipeline Job Overview</h2></div>
+  <div style="padding:0">
+    <table>
+      <thead><tr><th>Job</th><th>Build</th><th>Status</th><th>Findings</th><th>Crit/High</th><th>First Error</th></tr></thead>
+      <tbody><tr><td><strong>WP-Deploy</strong></td><td>#1</td><td><span style="color:#16a34a;font-weight:700">SUCCESS</span></td><td>0</td><td><span style="color:#dc2626">0</span> / <span style="color:#ea580c">0</span></td><td class="mono" style="font-size:11px;color:#94a3b8">No errors extracted</td></tr><tr><td><strong>WP-DevSecOps-Security-Scan</strong></td><td>#86</td><td><span style="color:#16a34a;font-weight:700">SUCCESS</span></td><td>5</td><td><span style="color:#dc2626">1</span> / <span style="color:#ea580c">3</span></td><td class="mono" style="font-size:11px;color:#94a3b8">No errors extracted</td></tr><tr><td><strong>WP-DevSecOps-Security-Scan</strong></td><td>#85</td><td><span style="color:#dc2626;font-weight:700">FAILURE</span></td><td>5</td><td><span style="color:#dc2626">4</span> / <span style="color:#ea580c">1</span></td><td class="mono" style="font-size:11px;color:#94a3b8">L3: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:</td></tr><tr><td><strong>WP-DevSecOps-Security-Scan</strong></td><td>#84</td><td><span style="color:#dc2626;font-weight:700">FAILURE</span></td><td>5</td><td><span style="color:#dc2626">4</span> / <span style="color:#ea580c">1</span></td><td class="mono" style="font-size:11px;color:#94a3b8">L3: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:</td></tr><tr><td><strong>WP-DevSecOps-Security-Scan</strong></td><td>#83</td><td><span style="color:#dc2626;font-weight:700">FAILURE</span></td><td>5</td><td><span style="color:#dc2626">4</span> / <span style="color:#ea580c">1</span></td><td class="mono" style="font-size:11px;color:#94a3b8">L3: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:</td></tr><tr><td><strong>WP-DevSecOps-Security-Scan</strong></td><td>#82</td><td><span style="color:#dc2626;font-weight:700">FAILURE</span></td><td>5</td><td><span style="color:#dc2626">4</span> / <span style="color:#ea580c">1</span></td><td class="mono" style="font-size:11px;color:#94a3b8">L3: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:</td></tr></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sh"><div class="si">&#9889;</div><h2>Jenkins Auto-Remediation Guide (Snyk + ZAP + Deploy)</h2></div>
+  <div class="sp"><div class="ag"><div class="ac can"><div class="al">&#10003; CAN Be Auto-Fixed in Jenkins</div><ul><li>npm audit fix &mdash; auto-patches CVEs in Node packages</li><li>wp plugin update --all &mdash; updates all WordPress plugins</li><li>composer update &mdash; updates PHP dependencies</li><li>Automatic build retry on transient failures</li><li>Slack / email alert on failure</li><li>Auto-create GitHub Issue on build failure</li><li>Archive Snyk + ZAP reports as build artifacts</li></ul></div><div class="ac cannot"><div class="al">&#9888; Requires Manual Review First</div><ul><li>Breaking dependency upgrades (major version bumps)</li><li>Rotating exposed API keys and secrets</li><li>Fixing SQL injection / XSS in custom PHP code</li><li>Resolving ZAP HIGH / CRITICAL alerts in app code</li><li>Webhook firewall / NAT / ngrok setup</li><li>WordPress theme compatibility testing</li><li>Database schema migrations</li></ul></div></div><div class="jfe"><div class="jft"><span>&#128196;&nbsp; Pipeline Template &mdash; edit the 3 ENVIRONMENT lines at top, then paste into Jenkinsfile</span><button class="copy-btn" onclick="copyPipeline()">&#128203; Copy</button></div><pre id="pipeline-code"><code>pipeline {
+    agent any
+    triggers { githubPush() }
+    options {
+        timestamps()
+        timeout(time: 30, unit: &#x27;MINUTES&#x27;)
+        buildDiscarder(logRotator(numToKeepStr: &#x27;10&#x27;))
+    }
+
+    environment {
+        WP_URL    = &#x27;https://your-wordpress-site.com&#x27; // CHANGE THIS
+        GH_REPO   = &#x27;YOUR_ORG/YOUR_REPO&#x27;             // CHANGE THIS
+        DEPLOY_TO = &#x27;user@yourserver:/var/www/html/&#x27;  // CHANGE THIS
+    }
+
+    stages {
+
+        stage(&#x27;1 - Checkout&#x27;) {
+            steps { checkout scm }
+        }
+
+        stage(&#x27;2 - Tool Check&#x27;) {
+            steps {
+                sh &#x27;&#x27;&#x27;
+                    node  --version  2&gt;/dev/null || echo &quot;Node  NOT FOUND&quot;
+                    php   --version  2&gt;/dev/null || echo &quot;PHP   NOT FOUND&quot;
+                    wp    --info     2&gt;/dev/null || echo &quot;WP-CLI NOT FOUND&quot;
+                    snyk  --version  2&gt;/dev/null || echo &quot;Snyk  NOT FOUND&quot;
+                &#x27;&#x27;&#x27;
+            }
+        }
+
+        stage(&#x27;3 - Snyk Scan&#x27;) {
+            steps {
+                withCredentials([string(credentialsId: &#x27;snyk-token&#x27;, variable: &#x27;SNYK_TOKEN&#x27;)]) {
+                    sh &#x27;&#x27;&#x27;
+                        snyk auth $SNYK_TOKEN
+                        snyk test --severity-threshold=high || true
+                        snyk monitor || true
+                    &#x27;&#x27;&#x27;
+                }
+            }
+        }
+
+        stage(&#x27;4 - OWASP ZAP&#x27;) {
+            steps {
+                sh &#x27;&#x27;&#x27;
+                    docker run --rm \
+                        -v &quot;$(pwd)&quot;:/zap/wrk/:rw \
+                        ghcr.io/zaproxy/zaproxy:stable \
+                        zap-baseline.py \
+                            -t $WP_URL \
+                            -r zap_report.html \
+                            -x zap_report.xml \
+                            --auto || true
+                &#x27;&#x27;&#x27;
+            }
+            post {
+                always {
+                    publishHTML([
+                        allowMissing: true,
+                        reportDir: &#x27;.&#x27;,
+                        reportFiles: &#x27;zap_report.html&#x27;,
+                        reportName: &#x27;OWASP ZAP&#x27;
+                    ])
+                }
+            }
+        }
+
+        stage(&#x27;5 - Auto-Fix CVEs&#x27;) {
+            parallel {
+                stage(&#x27;npm audit&#x27;) {
+                    when { expression { fileExists(&#x27;package.json&#x27;) } }
+                    steps { sh &#x27;npm audit fix || true&#x27; }
+                }
+                stage(&#x27;wp plugins&#x27;) {
+                    when { expression { fileExists(&#x27;wp-config.php&#x27;) } }
+                    steps { sh &#x27;wp plugin update --all --allow-root || true&#x27; }
+                }
+            }
+        }
+
+        stage(&#x27;6 - PHP Syntax&#x27;) {
+            steps {
+                sh &#x27;find . -name &quot;*.php&quot; -not -path &quot;*/vendor/*&quot; -exec php -l {} \\; 2&gt;&amp;1 | grep -v &quot;No syntax errors&quot; || true&#x27;
+            }
+        }
+
+        stage(&#x27;7 - Deploy&#x27;) {
+            when { branch &#x27;main&#x27; }
+            steps {
+                withCredentials([sshUserPrivateKey(
+                    credentialsId: &#x27;deploy-key&#x27;,
+                    keyFileVariable: &#x27;SSH_KEY&#x27;
+                )]) {
+                    sh &#x27;&#x27;&#x27;
+                        rsync -avz --delete \
+                            --exclude=&quot;.git&quot; \
+                            --exclude=&quot;node_modules&quot; \
+                            -e &quot;ssh -i $SSH_KEY -o StrictHostKeyChecking=no&quot; \
+                            ./ $DEPLOY_TO
+                    &#x27;&#x27;&#x27;
+                }
+            }
+        }
+
+        stage(&#x27;8 - Quality Gate&#x27;) {
+            steps {
+                script {
+                    def n = sh(script: &#x27;grep -c &quot;High&quot; zap_report.xml 2&gt;/dev/null || echo 0&#x27;,
+                               returnStdout: true).trim().toInteger()
+                    if (n &gt; 0) { error &quot;BLOCKED: ${n} ZAP High alerts.&quot; }
+                }
+            }
+        }
+    }
+
+    post {
+        failure {
+            withCredentials([string(credentialsId: &#x27;github-token&#x27;, variable: &#x27;GH_TOKEN&#x27;)]) {
+                sh &#x27;curl -sf -X POST https://api.github.com/repos/$GH_REPO/issues -H &quot;Authorization: token $GH_TOKEN&quot; -d &quot;{\\&quot;title\\&quot;:\\&quot;CI Fail: $JOB_NAME\\&quot;,\\&quot;body\\&quot;:\\&quot;$BUILD_URL\\&quot;,\\&quot;labels\\&quot;:[\\&quot;ci-failure\\&quot;]}&quot; || true&#x27;
+            }
+            mail(to: &#x27;devops@yourcompany.com&#x27;,
+                 subject: &quot;FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}&quot;,
+                 body: &quot;Log: ${env.BUILD_URL}&quot;)
+        }
+        always {
+            archiveArtifacts(artifacts: &#x27;**/zap_report.*,**/snyk-report.json&#x27;, allowEmptyArchive: true)
+        }
+    }
+}</code></pre></div></div>
+</div>
+
+<div class="sec" id="jenkinsfile-guide">
+  <div class="sh"><div class="si">&#128218;</div><h2>How to Use the Jenkinsfile Template — Step-by-Step Guide</h2></div>
+  <div class="sp">
+
+    <!-- FAQ CARDS -->
+    <div class="faq-grid">
+
+      <div class="faq-card faq-blue">
+        <div class="faq-icon">&#10067;</div>
+        <div class="faq-q">What exactly IS a Jenkinsfile?</div>
+        <div class="faq-a">
+          A Jenkinsfile is a plain text file called <code>Jenkinsfile</code> (no extension) that you place
+          in the <strong>root folder of your project</strong> on your computer (same folder as wp-config.php or package.json).
+          It tells Jenkins what to do every time you push code to GitHub.<br><br>
+          Think of it like a recipe — Jenkins reads the recipe and follows every step automatically.
+        </div>
+      </div>
+
+      <div class="faq-card faq-yellow">
+        <div class="faq-icon">&#10067;</div>
+        <div class="faq-q">Can I have more than one Jenkinsfile?</div>
+        <div class="faq-a">
+          <strong>Each Jenkins job can only use ONE Jenkinsfile</strong> — but you can have a different
+          Jenkinsfile for each project/job.<br><br>
+          Example setup:
+          <ul style="margin-top:8px;padding-left:18px;line-height:2">
+            <li><code>my-wordpress-site/Jenkinsfile</code> &rarr; used by the <em>wordpress-deploy</em> job</li>
+            <li><code>my-theme/Jenkinsfile</code> &rarr; used by the <em>theme-build</em> job</li>
+            <li><code>security-scan/Jenkinsfile</code> &rarr; used by the <em>snyk-scan</em> job</li>
+          </ul>
+          So yes — one per project folder = perfectly fine &#10003;
+        </div>
+      </div>
+
+      <div class="faq-card faq-red">
+        <div class="faq-icon">&#9888;</div>
+        <div class="faq-q">Will copy-pasting overwrite my original settings?</div>
+        <div class="faq-a">
+          <strong>Only if you replace the entire file.</strong> You have two safe options:<br><br>
+          <span class="opt-badge opt-a">Option A</span> <strong>Merge individual stages</strong> — copy just the
+          stage block you need (e.g. the Snyk stage) and paste it inside your existing pipeline's
+          <code>stages { }</code> block. Nothing else changes.<br><br>
+          <span class="opt-badge opt-b">Option B</span> <strong>Replace the whole file</strong> — safe to do
+          if you don't have a Jenkinsfile yet, or if you back up the old one first
+          (rename it <code>Jenkinsfile.bak</code>).
+        </div>
+      </div>
+
+    </div><!-- /faq-grid -->
+
+    <!-- STEP BY STEP -->
+    <div class="guide-title">&#128196; Step-by-Step: How to Add or Update Your Jenkinsfile</div>
+
+    <div class="steps-wrap">
+
+      <div class="step-row">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-title">Find (or create) your Jenkinsfile</div>
+          <div class="step-desc">
+            Open your project folder on your computer (the one connected to GitHub).
+            Look for a file named exactly <code>Jenkinsfile</code> in the root.<br>
+            &bull; If it <strong>exists</strong> &rarr; open it in Notepad++ or VS Code. <strong>Do NOT delete it yet.</strong><br>
+            &bull; If it <strong>doesn&rsquo;t exist</strong> &rarr; right-click in the folder &rarr; New &rarr; Text File
+            &rarr; rename it <code>Jenkinsfile</code> (remove the .txt extension).
+          </div>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-title">Back up your existing Jenkinsfile (if you have one)</div>
+          <div class="step-desc">
+            In your project folder, make a copy and name it <code>Jenkinsfile.bak</code>.
+            This is your safety net — if anything breaks you can just rename it back.<br>
+            <div class="step-cmd">copy Jenkinsfile Jenkinsfile.bak</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-title">Decide: merge a stage OR replace the whole file</div>
+          <div class="step-desc">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px">
+              <div class="merge-box">
+                <div class="merge-title" style="color:#34d399">&#10003; SAFER — Add one stage at a time</div>
+                Find the <code>stages &#123; &#125;</code> block in your existing Jenkinsfile.
+                Paste the new stage block (e.g. Snyk Scan, ZAP Scan) <strong>inside</strong> that block,
+                after your last existing stage. Your other stages are untouched.
+                <pre style="margin-top:10px;font-size:10px;color:#81c784;background:#040a11;padding:10px;border-radius:6px;overflow-x:auto">stages &#123;
+  stage('Checkout') &#123; ... &#125;  &larr; your original
+  stage('Build')    &#123; ... &#125;  &larr; your original
+
+  // &#8595; PASTE NEW STAGE HERE &#8595;
+  stage('Snyk Scan') &#123;
+    steps &#123;
+      sh 'snyk test'
+    &#125;
+  &#125;
+&#125;</pre>
+              </div>
+              <div class="merge-box">
+                <div class="merge-title" style="color:#fbbf24">&#9888; FULL REPLACE — Use the full template</div>
+                Copy the entire template from the Auto-Remediation section above.
+                Select ALL content in your Jenkinsfile (Ctrl+A) and paste.
+                <strong>Before doing this:</strong> check the template has the right credentials IDs
+                for your Jenkins setup (snyk-token, deploy-key, github-token).
+                Change any placeholder values like <code>YOUR_ORG</code> and <code>your-app-url</code>
+                before saving.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="step-title">Edit the placeholder values in the template</div>
+          <div class="step-desc">
+            Search the pasted code for these placeholders and replace them with your real values:
+            <table class="ph-table">
+              <thead><tr><th>Placeholder</th><th>Replace with</th><th>Where to find it</th></tr></thead>
+              <tbody>
+                <tr><td><code>YOUR_ORG/YOUR_REPO</code></td><td>Your GitHub username/repo name</td><td>GitHub URL bar</td></tr>
+                <tr><td><code>your-app-url</code></td><td>Your WordPress site URL</td><td>Your browser address bar</td></tr>
+                <tr><td><code>snyk-token</code></td><td>The credential ID you set in Jenkins</td><td>Manage Jenkins &rarr; Credentials</td></tr>
+                <tr><td><code>deploy-key</code></td><td>Your SSH deploy credential ID</td><td>Manage Jenkins &rarr; Credentials</td></tr>
+                <tr><td><code>user@yourserver</code></td><td>Your actual server SSH user and IP</td><td>Your hosting provider</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <div class="step-title">Save the file and push to GitHub</div>
+          <div class="step-desc">
+            Save the Jenkinsfile in VS Code / Notepad++. Then in <strong>GitHub Desktop</strong>:
+            <ol style="margin-top:8px;padding-left:18px;line-height:2.2">
+              <li>You will see <code>Jenkinsfile</code> listed as a changed file on the left panel</li>
+              <li>Write a commit message: <em>"ci: update Jenkinsfile with Snyk + ZAP stages"</em></li>
+              <li>Click <strong>Commit to main</strong></li>
+              <li>Click <strong>Push origin</strong></li>
+            </ol>
+            GitHub will send a webhook to Jenkins, which will automatically pick up the new Jenkinsfile
+            and run it on the next build.
+          </div>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num">6</div>
+        <div class="step-body">
+          <div class="step-title">Watch the build in Jenkins</div>
+          <div class="step-desc">
+            Open Jenkins in your browser (usually <code>http://localhost:8080</code>).<br>
+            Click your job name &rarr; click the latest build number &rarr; click <strong>Console Output</strong>.<br>
+            You will see each stage run in real time. If a stage turns <span style="color:#ef4444;font-weight:700">red</span>,
+            the error message will appear right there — scroll up from the bottom to find <code>ERROR</code> or <code>FAILED</code>.
+          </div>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num">7</div>
+        <div class="step-body">
+          <div class="step-title">Something broke? Restore your backup</div>
+          <div class="step-desc">
+            In your project folder, rename <code>Jenkinsfile.bak</code> back to <code>Jenkinsfile</code>
+            (delete or rename the broken one first). Commit and push — Jenkins will go back to your
+            working configuration immediately.
+            <div class="step-cmd">del Jenkinsfile &amp;&amp; rename Jenkinsfile.bak Jenkinsfile</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /steps-wrap -->
+
+    <!-- QUICK REFERENCE: Where do credentials go -->
+    <div class="guide-title" style="margin-top:32px">&#128272; Quick Reference: Where to Add Credentials in Jenkins</div>
+    <div class="cred-box">
+      <div class="cred-step">
+        <span class="cred-num">1</span>
+        Go to <strong>Jenkins</strong> &rarr; <strong>Manage Jenkins</strong> &rarr; <strong>Credentials</strong>
+        &rarr; <strong>(global)</strong> &rarr; <strong>Add Credentials</strong>
+      </div>
+      <div class="cred-step">
+        <span class="cred-num">2</span>
+        For a <strong>Snyk token</strong>: Kind = <em>Secret text</em> &rarr; paste your Snyk API token
+        &rarr; ID = <code>snyk-token</code> &rarr; Save
+      </div>
+      <div class="cred-step">
+        <span class="cred-num">3</span>
+        For a <strong>GitHub token</strong>: Kind = <em>Secret text</em> &rarr; paste GitHub Personal Access Token
+        &rarr; ID = <code>github-token</code> &rarr; Save
+      </div>
+      <div class="cred-step">
+        <span class="cred-num">4</span>
+        For an <strong>SSH deploy key</strong>: Kind = <em>SSH Username with private key</em>
+        &rarr; paste your private key &rarr; ID = <code>deploy-key</code> &rarr; Save
+      </div>
+      <div class="cred-step">
+        <span class="cred-num">5</span>
+        These IDs (<code>snyk-token</code>, <code>github-token</code>, <code>deploy-key</code>) must match
+        exactly what you put in the Jenkinsfile <code>withCredentials([...])</code> block
+      </div>
+    </div>
+
+  </div><!-- /sp -->
+</div><!-- /sec -->
+
+</div>
+<footer>AI DevSecOps Scanner v2.1 &nbsp;|&nbsp; 2026-02-28 20:11:19 &nbsp;|&nbsp; C:\ProgramData\Jenkins\.jenkins\jobs</footer>
+
+<script>
+function tog(id){
+  var r=document.getElementById(id);
+  var p=r.previousElementSibling;
+  var xi=p?p.querySelector('.xi'):null;
+  if(r.style.display==='none'){r.style.display='table-row';if(xi)xi.textContent='-'}
+  else{r.style.display='none';if(xi)xi.textContent='+'}
+}
+function copyPipeline(){
+  var el=document.getElementById('pipeline-code');
+  if(!el)return;
+  var txt=el.innerText||el.textContent;
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(txt).then(function(){showCopied()});
+  }else{
+    var ta=document.createElement('textarea');
+    ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';
+    document.body.appendChild(ta);ta.select();
+    document.execCommand('copy');document.body.removeChild(ta);
+    showCopied();
+  }
+}
+function showCopied(){
+  var btn=document.querySelector('.copy-btn');
+  if(!btn)return;
+  btn.textContent='✓ Copied!';btn.classList.add('copied');
+  setTimeout(function(){btn.innerHTML='&#128203; Copy';btn.classList.remove('copied');},2500);
+}
+window.onload=function(){
+  var first=document.querySelector('.fr');
+  if(first)first.click();
+};
+</script>
+</body></html>
